@@ -1,0 +1,23 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "a Simple toDo List Software",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Surice/toDo-List.git"
+  },
+  "author": "Sebastian Ulrich",
+  "license": "ISC, Private",
+  "bugs": {
+    "url": "https://github.com/Surice/toDo-List/issues"
+  },
+  "homepage": "https://github.com/Surice/toDo-List#readme",
+  "dependencies": {
+    "electron": "^9.0.3"
+  }
+}
