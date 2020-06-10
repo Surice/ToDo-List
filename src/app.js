@@ -13,7 +13,9 @@ function createWindow () {
     frame: false,
     transparent: true,
     autoHideMenuBar: true,
-    darkTheme: true, 
+    darkTheme: true,
+    icon: `${__dirname}/icon.png`,
+    
     
     webPreferences: {
       nodeIntegration: true

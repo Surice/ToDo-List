@@ -22,7 +22,7 @@ function constructor(){
     document.getElementById('list').innerHTML = "";
 
     save.forEach(function(e, i){
-        document.getElementById('list').innerHTML += `<tr><th>${e}</th><th><button type="button" class="close del-btn" aria-label="Close" onclick="delEl(${i})"><span aria-hidden="true">&times;</span></button></th></tr>`;
+        document.getElementById('list').innerHTML += `<tr><th>${e}</th><th><button type="button" class="del-btn close" aria-label="Close" onclick="delEl(${i})"><span aria-hidden="true">&times;</span></button></th></tr>`;
     });
 }
 function delEl(i){

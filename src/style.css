@@ -1,3 +1,8 @@
+html{
+    border: 1px solid;
+    border-color: rgb(148, 148, 148);
+}
+
 .head-txt{
     color: rgb(255, 0, 0);
 }
@@ -5,17 +10,19 @@
     margin-left: 10px;
 }
 .txt-inp{
-    margin: 2px;
+    margin: 6px;
 }
 .close-btn{
     float: right;
     margin: 5px;
 }
 .del-btn{
-    border-radius: 3px;
-    background-color: red;
+    text-align: center !important;
+    color: red !important;
 }
 .table{
+    top:180px;
     margin: auto;
+    border-radius: 5px;
     width: 50% !important;
 }
