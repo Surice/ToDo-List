@@ -2,19 +2,24 @@ html{
     border: 1px solid;
     border-color: rgb(148, 148, 148);
 }
+body{
+    background-image: url(./background.jpg);
+}
 
 .head-txt{
     color: rgb(255, 0, 0);
 }
-.inp-form{
+.inp-form, .res-btn{
     margin-left: 10px;
 }
-.txt-inp{
-    margin: 6px;
+.add-btn{
+    margin-left: 6px;
 }
-.close-btn{
-    float: right;
+.navbar-me{
     margin: 5px;
+}
+.nav-btn{
+    float: right;
 }
 .del-btn{
     text-align: center !important;

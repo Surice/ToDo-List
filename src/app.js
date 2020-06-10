@@ -20,14 +20,14 @@ function createWindow () {
     webPreferences: {
       nodeIntegration: true
     }
-  })
-
+  });
 
   // und lade die index.html der App.
   win.loadFile('main.html');
+
   globalShortcut.register('Esc', () => {
     win.close();
-});
+  });
 }
 
 app.whenReady().then(createWindow);

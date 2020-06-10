@@ -30,3 +30,8 @@ function delEl(i){
     fs.writeFileSync(`${__dirname}/save.json`, JSON.stringify(save));
     constructor();
 }
+function cAll(){
+    save = [];
+    fs.writeFileSync(`${__dirname}/save.json`, JSON.stringify(save));
+    constructor();
+}
