@@ -1,24 +1,32 @@
 const fs = require('fs');
 
-const save = fs.readFileSync(JSON.stringify(`${__dirname}/save.json`).toString());
-
+var save = JSON.parse(fs.readFileSync(`${__dirname}/save.json`));
 
 constructor();
 
 function addItem(){
     const item = document.getElementById('txt-inp').value;
+    document.getElementById('txt-inp').value = "";
+
     if(item){
         save.push(item);
-        localStorage.setItem("list", save);
+        console.log(save);
+        fs.writeFileSync(`${__dirname}/save.json`, JSON.stringify(save));
         constructor();
     }
 }
 
 function constructor(){
+    console.log(save);
+
     document.getElementById('list').innerHTML = "";
-    save.forEach(e, i => {
-        fs.writeFileSync(`${__dirname}/save.json`, JSON.parse(save));
-        
-        document.getElementById('list').innerHTML += `<li>${e}</li>`;
+
+    save.forEach(function(e, i){
+        document.getElementById('list').innerHTML += `<tr><th>${e}</th><th><button type="button" class="close del-btn" aria-label="Close" onclick="delEl(${i})"><span aria-hidden="true">&times;</span></button></th></tr>`;
     });
+}
+function delEl(i){
+    save.splice(i,1);
+    fs.writeFileSync(`${__dirname}/save.json`, JSON.stringify(save));
+    constructor();
 }

@@ -1,3 +1,21 @@
 .head-txt{
     color: rgb(255, 0, 0);
 }
+.inp-form{
+    margin-left: 10px;
+}
+.txt-inp{
+    margin: 2px;
+}
+.close-btn{
+    float: right;
+    margin: 5px;
+}
+.del-btn{
+    border-radius: 3px;
+    background-color: red;
+}
+.table{
+    margin: auto;
+    width: 50% !important;
+}
