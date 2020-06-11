@@ -3,6 +3,7 @@ const fs = require('fs');
 const config = JSON.parse(fs.readFileSync(`${__dirname}/config.json`));
 
 var save = JSON.parse(fs.readFileSync(`${__dirname}/save.json`));
+var trackMouse = true;
 
 constructor();
 
@@ -39,8 +40,8 @@ function cAll(){
 }
 
 function minWin(){
-    window.resizeTo(0,0);
     window.blur();
+    window.resizeTo(0,0);
     window.addEventListener("focus", function(event){ 
         window.resizeTo(config.width, config.height);
     }, false);
@@ -55,5 +56,43 @@ async function fullWin(){
         const y = screen.height/2-(window.outerHeight/2);
         
         window.moveTo(x, y);
+    }
+}
+
+function grabDown(){
+    console.log("down");
+    trackMouse = true;
+    trackMouseFun();
+}
+function grabUp(){
+    console.log("up");
+    trackMouse = false;
+}
+
+function trackMouseFun(){
+    document.onmousemove = handleMouseMove;
+
+    function handleMouseMove(event) {
+        var eventDoc, doc, body;
+
+        event = event || window.event; // IE-ism
+
+        if(event.pageX == null && event.clientX != null){
+            eventDoc = (event.target && event.target.ownerDocument) || document;
+            doc = eventDoc.documentElement;
+            body = eventDoc.body;
+
+            event.pageX = event.clientX +
+              (doc && doc.scrollLeft || body && body.scrollLeft || 0) -
+              (doc && doc.clientLeft || body && body.clientLeft || 0);
+            event.pageY = event.clientY +
+              (doc && doc.scrollTop  || body && body.scrollTop  || 0) -
+              (doc && doc.clientTop  || body && body.clientTop  || 0 );
+        }
+        //output of tracking here. Usin `event.pageX` and `event.pageY`
+    }
+    if(trackMouse){
+        window.moveTo(event.pageX, event.pageY+window.innerHeight/2);
+        trackMouseFun();
     }
 }

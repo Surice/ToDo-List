@@ -6,8 +6,19 @@ body{
     background-image: url(./background.jpg);
 }
 
+.grab-btn{
+    height: 10px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
 .head-txt{
-    color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
 }
 .inp-form, .res-btn{
     margin-left: 10px;
@@ -20,6 +31,7 @@ body{
 }
 .nav-btn{
     float: right;
+    margin: 2px;
 }
 .del-btn{
     text-align: center !important;

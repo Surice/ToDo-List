@@ -7,7 +7,7 @@ const config = JSON.parse(fs.readFileSync(`${__dirname}/config.json`));
 
 
 app.on('ready', function(){
-  let startWin = new BrowserWindow({width:500, height:120, transparent:true, frame:false, center:true, webPreferences:{nodeIntegration:true}});
+  let startWin = new BrowserWindow({width:256, height:256, transparent: true, frame:false, center:true, icon: `./icon.png`,webPreferences:{nodeIntegration:true}});
   startWin.loadFile('./start.html');
 
   //erstellt ein neues fenster
