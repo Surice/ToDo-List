@@ -1,6 +1,8 @@
 const electron = require('electron');
+const fs = require('fs');
 
 const { app, BrowserWindow} = require('electron');
+const config = JSON.parse(fs.readFileSync(`${__dirname}/config.json`));
 
 
 
@@ -10,8 +12,8 @@ app.on('ready', function(){
 
   //erstellt ein neues fenster
   let win = new BrowserWindow({
-    width: 1200,
-    height: 600,
+    width: config.width,
+    height: config.height,
     show: false,
     title: "ToDo-List",
     center: true,

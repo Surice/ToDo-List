@@ -1,5 +1,7 @@
 const fs = require('fs');
 
+const config = JSON.parse(fs.readFileSync(`${__dirname}/config.json`));
+
 var save = JSON.parse(fs.readFileSync(`${__dirname}/save.json`));
 
 constructor();
@@ -35,3 +37,25 @@ function cAll(){
     fs.writeFileSync(`${__dirname}/save.json`, JSON.stringify(save));
     constructor();
 }
+
+function minWin(){
+    window.resizeTo(0,0);
+    window.blur(); 
+}
+async function fullWin(){
+    if(window.innerHeight != screen.height && window.innerWidth != screen.width){
+        window.resizeTo(screen.width, screen.height);
+    }else{
+        await window.resizeTo(config.width, config.height);
+
+        const x = screen.width/2-(window.outerWidth/2);
+        const y = screen.height/2-(window.outerHeight/2);
+        
+        window.moveTo(x, y);
+    }
+}
+
+window.addEventListener("focus", function(event) 
+{ 
+    window.resizeTo(config.width, config.height);
+}, false);
