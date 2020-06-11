@@ -40,7 +40,10 @@ function cAll(){
 
 function minWin(){
     window.resizeTo(0,0);
-    window.blur(); 
+    window.blur();
+    window.addEventListener("focus", function(event){ 
+        window.resizeTo(config.width, config.height);
+    }, false);
 }
 async function fullWin(){
     if(window.innerHeight != screen.height && window.innerWidth != screen.width){
@@ -54,8 +57,3 @@ async function fullWin(){
         window.moveTo(x, y);
     }
 }
-
-window.addEventListener("focus", function(event) 
-{ 
-    window.resizeTo(config.width, config.height);
-}, false);
