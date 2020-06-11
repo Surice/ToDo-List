@@ -1,11 +1,14 @@
 <html>
     <head>
+        <link rel="stylesheet" href="./fontawesome/css/all.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <button class="grab-btn" onmousedown="grabDown()" onmouseup="grabUp()"></button>
         <div class="navbar-me">
+            <button class="cnt-btn btn btn-secondary" onclick="settings()"><i class="fas fa-cogs"></i></button>
+
             <button class="nav-btn close-btn btn btn-danger" onclick="window.close()">Q</button>
             <button class="nav-btn btn btn-warning" onclick="fullWin()">F</button>
             <button class="nav-btn btn btn-info" onclick="minWin()">M</button>
