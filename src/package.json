@@ -2,10 +2,11 @@
   "name": "todolist",
   "version": "1.0.0",
   "description": "a Simple toDo List Software",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "electron app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "nexe -r ../src"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,10 @@
   },
   "homepage": "https://github.com/Surice/toDo-List#readme",
   "dependencies": {
-    "electron": "^9.0.3"
+    "electron": "^9.0.3",
+    "nexe": "^3.3.2"
+  },
+  "devDependencies": {
+    "electron-packager": "^14.2.1"
   }
 }
