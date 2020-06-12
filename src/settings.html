@@ -12,14 +12,22 @@
         <div class="size">
             <table>
                 <tr>
-                    <th>wide screen</th>
-                    <th><button class="sacle-btn"><i class="fas fa-mobile-alt"></button></i></th>
+                    <th class="scale-txt">wide screen</th>
+                    <th><button class="sacle-btn scale-full" onclick="size('full')"></button></i></th>
                 </tr>
                 <tr>
-                    <th>mobile size</th>
-                    <th><button class="sacle-btn"><i class="fas fa-desktop"></button></i></th>
+                    <th class="scale-txt">mobile size</th>
+                    <th><button class="sacle-btn scale-mobile" onclick="size('mobile')"></button></i></th>
                 </tr>
             </table>
         </div>
     </body>
+    <script src="index.js"></script>
+
+    <script>
+        const fs = require('fs');
+        const config = JSON.parse(fs.readFileSync(`${__dirname}/config.json`));
+        
+        
+    </script>
 </html>

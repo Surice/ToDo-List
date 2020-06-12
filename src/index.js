@@ -54,7 +54,6 @@ async function fullWin(){
 
         const x = screen.width/2-(window.outerWidth/2);
         const y = screen.height/2-(window.outerHeight/2);
-        
         window.moveTo(x, y);
     }
 }
@@ -95,4 +94,20 @@ function trackMouseFun(){
         window.moveTo(event.pageX, event.pageY+window.innerHeight/2);
         trackMouseFun();
     }
+}
+
+function settings(){
+    var setWin = window.open('./settings.html', 'set', 'width= 900, height= 500');
+}
+
+function size(v){
+    if(v == "full"){
+        window.resizeTo(config.width, config.height);
+    }
+    else if(v == "mobile"){
+        window.resizeTo(config.mobileW, config.mobileH);
+    }
+    const x = screen.width/2-(window.outerWidth/2);
+    const y = screen.height/2-(window.outerHeight/2);
+    window.moveTo(x, y);
 }

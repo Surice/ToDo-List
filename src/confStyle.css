@@ -12,8 +12,27 @@ body{
     color: rgb(255, 255, 255);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
-}.sacle-btn{
-    height: 200px;
-    width: 200px;
+}
+.size{
+    margin-left: 10px;
+}
+.scale-txt{
+    color: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+}
+.sacle-btn{
+    height: 150px;
+    width: 150px;
     margin: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}
+.scale-mobile{
+    background-image: url(./mobile.png);
+    background-size: 100%;
+}
+.scale-full{
+    background-image: url(./full-size.png);
+    background-size: 100%;
 }
