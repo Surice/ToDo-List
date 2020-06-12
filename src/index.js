@@ -96,7 +96,3 @@ function trackMouseFun(){
         trackMouseFun();
     }
 }
-
-function settings(){
-    
-}
