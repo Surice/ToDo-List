@@ -2,5 +2,9 @@
     "width": 1200,
     "height": 600,
     "mobileW": 500,
-    "mobileH": 700
+    "mobileH": 700,
+    "set_width": 900,
+    "set_height": 500,
+    "set_mobileW": 400,
+    "set_mobileH": 600
 }

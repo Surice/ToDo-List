@@ -1,11 +1,13 @@
 const fs = require('fs');
-
 const config = JSON.parse(fs.readFileSync(`${__dirname}/config.json`));
 
 var save = JSON.parse(fs.readFileSync(`${__dirname}/save.json`));
 var trackMouse = true;
 
+//at startup
 constructor();
+document.getElementById('set').style.height = config.set_height;
+document.getElementById('set').style.width = config.set_width;
 
 function addItem(){
     const item = document.getElementById('txt-inp').value;
@@ -97,17 +99,30 @@ function trackMouseFun(){
 }
 
 function settings(){
-    var setWin = window.open('./settings.html', 'set', 'width= 900, height= 500');
+    var set = document.getElementById('set');
+    if(window.innerHeight == config.mobileH && window.innerWidth == config.mobileW){
+        set.style.top = window.innerHeight/2-config.set_mobileH/2;
+        set.style.left = window.innerWidth/2-config.set_mobileW/2;
+    }else{
+        set.style.top = window.innerHeight/2-config.set_height/2;
+        set.style.left = window.innerWidth/2-config.set_width/2;
+    }
+    set.style.display = "block";
 }
 
 function size(v){
     if(v == "full"){
         window.resizeTo(config.width, config.height);
+        document.getElementById('set').style.height = config.set_height;
+        document.getElementById('set').style.width = config.set_width;
     }
     else if(v == "mobile"){
         window.resizeTo(config.mobileW, config.mobileH);
+        document.getElementById('set').style.height = config.set_mobileH;
+        document.getElementById('set').style.width = config.set_mobileW;
     }
     const x = screen.width/2-(window.outerWidth/2);
     const y = screen.height/2-(window.outerHeight/2);
     window.moveTo(x, y);
+    document.getElementById('set').style.display = "none";
 }

@@ -23,8 +23,9 @@ body{
 .inp-form, .res-btn{
     margin-left: 10px;
 }
-.add-btn{
-    margin-left: 6px;
+.txt-inp{
+    margin-bottom: 4px;
+    margin-right: 10px;
 }
 .navbar-me{
     margin: 5px;
@@ -42,4 +43,39 @@ body{
     margin: auto;
     border-radius: 5px;
     width: 50% !important;
+}
+
+.settings{
+    position: absolute;
+    background-color: rgba(73, 73, 73, 0.8);
+    border: 1px solid;
+    border-color: rgb(46, 46, 46);
+}
+.set-head-txt{
+    color: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+}
+.set-size{
+    margin-left: 10px;
+}
+.set-scale-txt{
+    color: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+}
+.set-sacle-btn{
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}
+.set-scale-mobile{
+    background-image: url(./mobile.png);
+    background-size: 100%;
+}
+.set-scale-full{
+    background-image: url(./full-size.png);
+    background-size: 100%;
 }
