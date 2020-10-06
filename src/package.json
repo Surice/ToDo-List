@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/Surice/toDo-List#readme",
   "dependencies": {
-    "electron": "^9.0.3",
+    "electron": "^9.3.0",
     "nexe": "^3.3.2"
   },
   "devDependencies": {
